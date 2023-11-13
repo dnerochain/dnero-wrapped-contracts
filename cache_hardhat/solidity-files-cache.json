@@ -1,9 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/truffle-dev/dnero-wrapped-contracts/contracts/WDToken.sol": {
-      "lastModificationDate": 1697218720421,
-      "contentHash": "c8f8efea8718a21552daa9b1c148376d",
+    "/home/truffle-dev/dnero-wrapped-contracts-official/contracts/WDToken.sol": {
+      "lastModificationDate": 1699825393587,
+      "contentHash": "3689a5d90b62d6d9350353b932a9cd82",
       "sourceName": "contracts/WDToken.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -12,6 +12,7 @@
             "enabled": true,
             "runs": 200
           },
+          "evmVersion": "petersburg",
           "outputSelection": {
             "*": {
               "*": [
@@ -30,7 +31,7 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.0"
+        "^0.8.9"
       ],
       "artifacts": [
         "Context",
@@ -41,9 +42,9 @@
         "WDToken"
       ]
     },
-    "/home/truffle-dev/dnero-wrapped-contracts/contracts/WDnero.sol": {
-      "lastModificationDate": 1697218723765,
-      "contentHash": "c59113ef7b9343581cb91000eda7409a",
+    "/home/truffle-dev/dnero-wrapped-contracts-official/contracts/WDnero.sol": {
+      "lastModificationDate": 1699825420503,
+      "contentHash": "f414b66039e4d8aeda14f700d0f2ac4f",
       "sourceName": "contracts/WDnero.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -52,6 +53,7 @@
             "enabled": true,
             "runs": 200
           },
+          "evmVersion": "petersburg",
           "outputSelection": {
             "*": {
               "*": [
@@ -70,7 +72,7 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.0"
+        "^0.8.9"
       ],
       "artifacts": [
         "Context",

@@ -1,7 +1,7 @@
 {
   "name": "dnero-wrapped-contracts",
-  "version": "1.0.1",
-  "description": "Dnero Wrapped Contract",
+  "version": "2.0.0",
+  "description": "Dnero Wrapped Contracts Official",
   "scripts": {
     "prettier": "npx prettier --write .",
     "test": "npx hardhat test --logs",
