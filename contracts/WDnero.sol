@@ -1,9 +1,9 @@
 /**
- *Submitted for verification at dnerochain.xyz on 10-18-2023
+ *Submitted for verification at explorer.dnerochain.xyz on 11-18-2023
  */
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.9;
 
 /**
  * @dev Provides information about the current execution context, including the
@@ -605,13 +605,13 @@ contract WDnero is ERC20, ReentrancyGuard {
         for (i = 0; i < 32; i ++) {
             data[idx++] = amountBytes[i];
         }
-        (bool success,) = address(0xcb).call(data); // 0xcb: precompiled contract for Dnero transfer
+        (bool success,) = address(0x4e35).call(data); // 0x4e35: precompiled contract for Dnero transfer
         require(success, "failed to call precompiled contract to transfer Dnero");
     }
 
      function getDneroBalance() public view returns (uint256) {
         bytes memory data = abi.encodePacked(address(this));
-        (bool success, bytes memory result) = address(0xc9).staticcall(data); // 0xc9: precompiled contract for Dnero balance retrieval
+        (bool success, bytes memory result) = address(0x4e37).staticcall(data); // 0x4e37: precompiled contract for Dnero balance retrieval
         
         require(success, "failed to call precompiled contract to query the Dnero balance");
         require(result.length <= 32, "bytes to uint256 conversion will overflow");
