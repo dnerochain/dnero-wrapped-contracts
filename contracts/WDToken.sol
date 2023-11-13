@@ -1,9 +1,9 @@
 /**
- *Submitted for verification at dnerochain.xyz on 10-18-2023
+ *Submitted for verification at explorer.dnerochain.xyz on 11-18-2023
  */
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.9;
 
 /**
  * @dev Provides information about the current execution context, including the
@@ -605,13 +605,13 @@ contract WDToken is ERC20, ReentrancyGuard {
         for (i = 0; i < 32; i ++) {
             data[idx++] = amountBytes[i];
         }
-        (bool success,) = address(0xcb).call(data); // 0xcb: precompiled contract for Theta transfer
+        (bool success,) = address(0x61bd).call(data); // 0x61bd: precompiled contract for DToken transfer
         require(success, "failed to call precompiled contract to transfer DToken");
     }
 
      function getDTokenBalance() public view returns (uint256) {
         bytes memory data = abi.encodePacked(address(this));
-        (bool success, bytes memory result) = address(0xc9).staticcall(data); // 0xc9: precompiled contract for Theta balance retrieval
+        (bool success, bytes memory result) = address(0x61bf).staticcall(data); // 0x61bf: precompiled contract for DToken balance retrieval
         
         require(success, "failed to call precompiled contract to query the DToken balance");
         require(result.length <= 32, "bytes to uint256 conversion will overflow");
