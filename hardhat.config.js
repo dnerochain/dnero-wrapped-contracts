@@ -30,8 +30,6 @@ module.exports = {
         enabled: true,
         runs: 200,
       },
-      evmVersion: 'petersburg'
-      //evmVersion: 'paris'
     },
   },
   paths: {
